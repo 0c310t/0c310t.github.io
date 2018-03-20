@@ -1,15 +1,802 @@
-<!DOCTYPE html>
 <html>
 <head>
-<title>GIANT DAD!!!</title>
+<title>Dark Souls Character Builder</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1 align="center"><big>The LEGEND</big></h1>
-<hr width="1000"/>
-<br/>
-<center><img src=giantdad.jpg alt="" /></center>
-<br/>
-<hr width="1000"/>
-<h1 align="center"><big>Well, what is it?!</big><h1>
+<br>
+<h1 align="center">The New Dark Souls Character Builder [ALPHA]</h1>
+<form>
+	<label>Enter Name:</label>
+	<input name="characterName" type="text" placeholder="Character Name" />
+</form>
+<form action="/action_page.php">
+	<label>Sex:</label>
+	<select class="selectBox" name="Sex">
+		<option value="Male">Male</option>
+		<option value="Female">Female</option>
+	</select>
+</form>
+<form action="/action_page.php">
+	<label>Class:</label>
+	<select class="selectBox" name="Class" style="width: 100px;">
+		<option value="Warrior">Warrior</option>
+		<option value="Knight">Knight</option>
+		<option value="Wanderer">Wanderer</option>
+		<option value="Thief">Thief</option>
+		<option value="Bandit">Bandit</option>
+		<option value="Hunter">Hunter</option>
+		<option value="Sorcerer">Sorcerer</option>
+		<option value="Pyromancer">Pyromancer</option>
+		<option value="Cleric">Cleric</option>
+		<option value="Deprived">Deprived</option>
+	</select>
+</form>
+<form action="/action_page.php">
+	<label>Gift:</label>
+	<select class="selectBox" name="Gift" style="width: 150px;">
+		<option value="Divine Blessing">Divine Blessing</option>
+		<option value="Black Firebomb">Black Firebomb</option>
+		<option value="Binoculars">Binoculars</option>
+		<option value="Pendant">Pendant</option>
+		<option value="Twin Humanities">Twin Humanities</option>
+		<option value="Master Key">Master Key</option>
+		<option value="Tiny Being's Ring">Tiny Being's Ring</option>
+		<option value="Old Witch's Ring">Old Witch's Ring</option>
+	</select>
+</form>
+<form id="lh1_f" action="/action_page.php">
+	<label>LH1:</label>
+	<select class="selectBox" id="lh1" name="lh1" style="width: 150px;">
+		<optgroup label="Daggers">
+			<option value="dagger">Dagger</option>
+			<option value="ghost_blade">Ghost Blade</option>
+			<option value="bandit_knife">Bandit's Knife</option>
+			<option value="parry_dagger">Parrying Dagger</option>
+			<option value="priscilla_dagger">Priscilla's Dagger</option>
+			<option value="dsilver_tracer">Dark Silver Tracer</option>
+		</optgroup>
+		<optgroup label="Straight Swords">
+			<option value="sword_hilt">Straight Sword Hilt</option>
+			<option value="broken_sword">Broken Straight Sword</option>
+			<option value="broadsword">Broadsword</option>
+			<option value="shortsword">Shortsword</option>
+			<option value="longsword">Longsword</option>
+			<option value="barbed_sword">Barbed Straight Sword</option>
+			<option value="sunlight_sword">Sunlight Straight Sword</option>
+			<option value="balder_sword">Balder Straight Sword</option>
+			<option value="astora_sword">Astora's Straight Sword</option>
+			<option value="silver_knight_sword">Silver Knight Straight Sword</option>
+			<option value="drake_sword">Drake Sword</option>
+			<option value="darksword">Darksword</option>
+			<option value="crystal_sword">Crystal Straight Sword</option>
+		</optgroup>
+		<optgroup label="Greatswords">
+			<option value="bastard_sword">Bastard Sword</option>
+			<option value="blk_knight_sword">Black Knight Sword</option>
+			<option value="claymore">Claymore</option>
+			<option value="flamberge">Flamberge</option>
+			<option value="crystal_gsword">Crystal Greatsword"</option>
+			<option value="manserpent_gsword">Man-Serpent Greatsword</option>
+			<option value="gr8_lord_gsword">Great Lord Greatsword</option>
+			<option value="moonlight_gsword">Moonlight Greatsword</option>
+			<option value="artorias_gsword">Greatsword of Artorias</option>
+			<option value="artorias_curse_gsword">Greatsword of Artorias (Cursed)</option>
+			<option value="stone_gsword">Stone Greatsword</option>
+			<option value="abyss_gsword">Abyss Greatsword</option>
+			<option value="obsidian_gsword">Obsidian Greatsword</option>
+		</optgroup>
+		<optgroup label="Ultra Greatswords">
+			<option value="dragon_gsword">Dragon Greatsword</option>
+			<option value="ug_sword">Greatsword</option>
+			<option value="blk_knight_gsword">Black Knight Greatsword</option>
+			<option value="zweihander">Zweihander</option>
+			<option value="demon_gsword">Demon Great Machete</option>
+		</optgroup>
+		<optgroup label="Curved Swords">
+			<option value="scimitar">Scimitar</option>
+			<option value="shotel">Shotel</option>
+			<option value="falcion">Falchion</option>
+			<option value="quelaag_sword">Quelaag's Furysword</option>
+			<option value="paint_guard_sword">Painting Guardian Sword</option>
+			<option value="jagged_ghost_blade">Jagged Ghost Blade</option>
+			<option value="gold_tracer">Gold Tracer</option>
+		</optgroup>
+		<optgroup label="Katanas">
+			<option value="uchigatana">Uchigatana</option>
+			<option value="washing_pole">Washing Pole</option>
+			<option value="iaito">Iaito</option>
+			<option value="chaos_blade">Chaos Blade</option>
+		</optgroup>
+		<optgroup label="Curved Greatswords">
+			<option value="server">Server</option>
+			<option value="murakumo">Murakumo</option>
+			<option value="gravelord_sword">Gravelord Sword</option>
+		</optgroup>
+		<optgroup label="Piercing Swords">
+			<option value="rapier">Rapier</option>
+			<option value="estoc">Estoc</option>
+			<option value="mail_breaker">Mail Breaker</option>
+			<option value="ricard_rapier">Ricard's Rapier</option>
+			<option value="velka_rapier">Velka's Rapier</option>
+		</optgroup>
+		<optgroup label="Axes">
+			<option value="hand_axe">Hand Axe</option>
+			<option value="gargoyle_axe">Gargoyle Tail Axe</option>
+			<option value="battle_axe">Battle Axe</option>
+			<option value="butcher_knife">Butcher Knife</option>
+			<option value="crescent_axe">Crescent Axe</option>
+			<option value="golem_axe">Golem Axe</option>
+		</optgroup>
+		<optgroup label="Great Axes">
+			<option value="demon_axe">Demon's Greataxe</option>
+			<option value="greataxe">Greataxe</option>
+			<option value="dragon_king_axe">Dragon King Greataxe</option>
+			<option value="blk_knight_axe">Black Knight Greataxe</option>
+			<option value="stone_axe">Stone Greataxe</option>
+		</optgroup>
+		<optgroup label="Hammers">
+			<option value="club">Club</option>
+			<option value="reinf_club">Reinforced Club</option>
+			<option value="mace">Mace</option>
+			<option value="morning_star">Morning Star</option>
+			<option value="warpick">Warpick</option>
+			<option value="pickaxe">Pickaxe</option>
+			<option value="blksmith_hammer">Blacksmith Hammer</option>
+			<option value="blksmith_ghammer">Blacksmith Giant Hammer</option>
+			<option value="vamos_hammer">Hammer of Vamos</option>
+		</optgroup>
+		<optgroup label="Great Hammers">
+			<option value="demon_hammer">Demon's Greathammer</option>
+			<option value="great_club">Great Club</option>
+			<option value="dragon_tooth">Dragon Tooth</option>
+			<option value="smough_hammer">Smough's Hammer</option>
+			<option value="grant">Grant</option>
+			<option value="large_club">Large Club</option>
+		</optgroup>
+		<optgroup label="Fists & Claws">
+			<option value="caestus">Caestus</option>
+			<option value="claws">Claws</option>
+			<option value="dragon_bone_fist">Dragon Bone Fist</option>
+			<option value="dark_hand">Dark Hand</option>
+		</optgroup>
+		<optgroup label="Spears">
+			<option value="spear">Spear</option>
+			<option value="wing_spear">Winged Spear</option>
+			<option value="demon_spear">Demon's Spear</option>
+			<option value="pike">Pike</option>
+			<option value="dragonslay_spear">Dragonslayer Spear</option>
+			<option value="partizan">Partizan</option>
+			<option value="channeler_trident">Channeler's Trident</option>
+			<option value="silver_knight_spear">Silver Knight Spear</option>
+			<option value="moon_butter_horn">Moonlight Butterfly Horn</option>
+			<option value="fourprong_plow">Four-pronged Plow</option>
+		</optgroup>
+		<optgroup label="Halberds">
+			<option value="halberd">Halberd</option>
+			<option value="gargoyle_halberd">Gargoyle's Halberd</option>
+			<option value="catch_pole">Titanite Catch Pole</option>
+			<option value="blk_knight_halberd">Black Knight Halberd</option>
+			<option value="great_scythe">Great Scythe</option>
+			<option value="lifehunt_scythe">Lifehunt Scythe</option>
+			<option value="scythe">Scythe</option>
+			<option value="lucerne">Lucerne</option>
+			<option value="giant_halberd">Giant's Halberd</option>
+		</optgroup>
+		<optgroup label="Whips">
+			<option value="whip">Whip</option>
+			<option value="notch_whip">Notched Whip</option>
+			<option value="guard_tail">Guardian Tail</option>
+		</optgroup>
+		<optgroup label="Bows">
+			<option value="shortbow">Short Bow</option>
+			<option value="longbow">Long Bow</option>
+			<option value="comp_bow">Composite Bow</option>
+			<option value="blk_pharis_bow">Black Bow of Pharis</option>
+			<option value="darkmoon_bow">Darkmoon Bow</option>
+		</optgroup>
+		<optgroup label="Greatbows">
+			<option value="dragonslayer_bow">Dragonslayer Greatbow</option>
+			<option value="gough_bow">Gough's Greatbow</option>
+		</optgroup>
+		<optgroup label="Crossbows">
+			<option value="light_cbow">Light Crossbow</option>
+			<option value="heavy_cbow">Heavy Crossbow</option>
+			<option value="sniper_cbow">Sniper Crossbow</option>
+			<option value="avelyn">Avelyn</option>
+		</optgroup>
+		<optgroup label="Catalysts">
+			<option value="sorc_cat">Sorcerer's Catalyst</option>
+			<option value="izalith_cat">Izalith Catalyst</option>
+			<option value="logan_cat">Logan's Catalyst</option>
+			<option value="beat_cat">Beatrice's Catalyst</option>
+			<option value="oolacile_cat">Oolacile Ivory Catalyst</option>
+			<option value="demon_cat">Demon's Catalyst</option>
+			<option value="crystal_cat">Tin Crystallization Catalyst</option>
+			<option value="dark_cat">Tin Darkmoon Catalyst</option>
+			<option value="manus_cat">Manus Catalyst</option>
+		</optgroup>
+		<optgroup label="Flames">
+			<option value="pyro_flame">Pyromancy Flame</option>
+			<option value="pyro_flame_u">Pyromancy Flame (Upgraded)</option>
+		</optgroup>
+		<optgroup label="Talismans">
+			<option value="tali">Talisman</option>
+			<option value="canvas_tali">Canvas Talisman</option>
+			<option value="thoro_tali">Thorolund Talisman</option>
+			<option value="ivory_tali">Ivory Talisman</option>
+			<option value="sun_tali">Sunlight Talisman</option>
+			<option value="velka_tali">Velka's Talisman</option>
+			<option value="dark_tali">Darkmoon Talisman</option>
+		</optgroup>
+	</select>
+</form>
+<form id="lh2_f" action="/action_page.php">
+	<label>LH2</label>
+	<select class="selectBox" id="lh2" name="lh2" style="width: 150px;">
+	<optgroup label="Daggers">
+			<option value="dagger">Dagger</option>
+			<option value="ghost_blade">Ghost Blade</option>
+			<option value="bandit_knife">Bandit's Knife</option>
+			<option value="parry_dagger">Parrying Dagger</option>
+			<option value="priscilla_dagger">Priscilla's Dagger</option>
+			<option value="dsilver_tracer">Dark Silver Tracer</option>
+		</optgroup>
+		<optgroup label="Straight Swords">
+			<option value="sword_hilt">Straight Sword Hilt</option>
+			<option value="broken_sword">Broken Straight Sword</option>
+			<option value="broadsword">Broadsword</option>
+			<option value="shortsword">Shortsword</option>
+			<option value="longsword">Longsword</option>
+			<option value="barbed_sword">Barbed Straight Sword</option>
+			<option value="sunlight_sword">Sunlight Straight Sword</option>
+			<option value="balder_sword">Balder Straight Sword</option>
+			<option value="astora_sword">Astora's Straight Sword</option>
+			<option value="silver_knight_sword">Silver Knight Straight Sword</option>
+			<option value="drake_sword">Drake Sword</option>
+			<option value="darksword">Darksword</option>
+			<option value="crystal_sword">Crystal Straight Sword</option>
+		</optgroup>
+		<optgroup label="Greatswords">
+			<option value="bastard_sword">Bastard Sword</option>
+			<option value="blk_knight_sword">Black Knight Sword</option>
+			<option value="claymore">Claymore</option>
+			<option value="flamberge">Flamberge</option>
+			<option value="crystal_gsword">Crystal Greatsword"</option>
+			<option value="manserpent_gsword">Man-Serpent Greatsword</option>
+			<option value="gr8_lord_gsword">Great Lord Greatsword</option>
+			<option value="moonlight_gsword">Moonlight Greatsword</option>
+			<option value="artorias_gsword">Greatsword of Artorias</option>
+			<option value="artorias_curse_gsword">Greatsword of Artorias (Cursed)</option>
+			<option value="stone_gsword">Stone Greatsword</option>
+			<option value="abyss_gsword">Abyss Greatsword</option>
+			<option value="obsidian_gsword">Obsidian Greatsword</option>
+		</optgroup>
+		<optgroup label="Ultra Greatswords">
+			<option value="dragon_gsword">Dragon Greatsword</option>
+			<option value="ug_sword">Greatsword</option>
+			<option value="blk_knight_gsword">Black Knight Greatsword</option>
+			<option value="zweihander">Zweihander</option>
+			<option value="demon_gsword">Demon Great Machete</option>
+		</optgroup>
+		<optgroup label="Curved Swords">
+			<option value="scimitar">Scimitar</option>
+			<option value="shotel">Shotel</option>
+			<option value="falcion">Falchion</option>
+			<option value="quelaag_sword">Quelaag's Furysword</option>
+			<option value="paint_guard_sword">Painting Guardian Sword</option>
+			<option value="jagged_ghost_blade">Jagged Ghost Blade</option>
+			<option value="gold_tracer">Gold Tracer</option>
+		</optgroup>
+		<optgroup label="Katanas">
+			<option value="uchigatana">Uchigatana</option>
+			<option value="washing_pole">Washing Pole</option>
+			<option value="iaito">Iaito</option>
+			<option value="chaos_blade">Chaos Blade</option>
+		</optgroup>
+		<optgroup label="Curved Greatswords">
+			<option value="server">Server</option>
+			<option value="murakumo">Murakumo</option>
+			<option value="gravelord_sword">Gravelord Sword</option>
+		</optgroup>
+		<optgroup label="Piercing Swords">
+			<option value="rapier">Rapier</option>
+			<option value="estoc">Estoc</option>
+			<option value="mail_breaker">Mail Breaker</option>
+			<option value="ricard_rapier">Ricard's Rapier</option>
+			<option value="velka_rapier">Velka's Rapier</option>
+		</optgroup>
+		<optgroup label="Axes">
+			<option value="hand_axe">Hand Axe</option>
+			<option value="gargoyle_axe">Gargoyle Tail Axe</option>
+			<option value="battle_axe">Battle Axe</option>
+			<option value="butcher_knife">Butcher Knife</option>
+			<option value="crescent_axe">Crescent Axe</option>
+			<option value="golem_axe">Golem Axe</option>
+		</optgroup>
+		<optgroup label="Great Axes">
+			<option value="demon_axe">Demon's Greataxe</option>
+			<option value="greataxe">Greataxe</option>
+			<option value="dragon_king_axe">Dragon King Greataxe</option>
+			<option value="blk_knight_axe">Black Knight Greataxe</option>
+			<option value="stone_axe">Stone Greataxe</option>
+		</optgroup>
+		<optgroup label="Hammers">
+			<option value="club">Club</option>
+			<option value="reinf_club">Reinforced Club</option>
+			<option value="mace">Mace</option>
+			<option value="morning_star">Morning Star</option>
+			<option value="warpick">Warpick</option>
+			<option value="pickaxe">Pickaxe</option>
+			<option value="blksmith_hammer">Blacksmith Hammer</option>
+			<option value="blksmith_ghammer">Blacksmith Giant Hammer</option>
+			<option value="vamos_hammer">Hammer of Vamos</option>
+		</optgroup>
+		<optgroup label="Great Hammers">
+			<option value="demon_hammer">Demon's Greathammer</option>
+			<option value="great_club">Great Club</option>
+			<option value="dragon_tooth">Dragon Tooth</option>
+			<option value="smough_hammer">Smough's Hammer</option>
+			<option value="grant">Grant</option>
+			<option value="large_club">Large Club</option>
+		</optgroup>
+		<optgroup label="Fists & Claws">
+			<option value="caestus">Caestus</option>
+			<option value="claws">Claws</option>
+			<option value="dragon_bone_fist">Dragon Bone Fist</option>
+			<option value="dark_hand">Dark Hand</option>
+		</optgroup>
+		<optgroup label="Spears">
+			<option value="spear">Spear</option>
+			<option value="wing_spear">Winged Spear</option>
+			<option value="demon_spear">Demon's Spear</option>
+			<option value="pike">Pike</option>
+			<option value="dragonslay_spear">Dragonslayer Spear</option>
+			<option value="partizan">Partizan</option>
+			<option value="channeler_trident">Channeler's Trident</option>
+			<option value="silver_knight_spear">Silver Knight Spear</option>
+			<option value="moon_butter_horn">Moonlight Butterfly Horn</option>
+			<option value="fourprong_plow">Four-pronged Plow</option>
+		</optgroup>
+		<optgroup label="Halberds">
+			<option value="halberd">Halberd</option>
+			<option value="gargoyle_halberd">Gargoyle's Halberd</option>
+			<option value="catch_pole">Titanite Catch Pole</option>
+			<option value="blk_knight_halberd">Black Knight Halberd</option>
+			<option value="great_scythe">Great Scythe</option>
+			<option value="lifehunt_scythe">Lifehunt Scythe</option>
+			<option value="scythe">Scythe</option>
+			<option value="lucerne">Lucerne</option>
+			<option value="giant_halberd">Giant's Halberd</option>
+		</optgroup>
+		<optgroup label="Whips">
+			<option value="whip">Whip</option>
+			<option value="notch_whip">Notched Whip</option>
+			<option value="guard_tail">Guardian Tail</option>
+		</optgroup>
+		<optgroup label="Bows">
+			<option value="shortbow">Short Bow</option>
+			<option value="longbow">Long Bow</option>
+			<option value="comp_bow">Composite Bow</option>
+			<option value="blk_pharis_bow">Black Bow of Pharis</option>
+			<option value="darkmoon_bow">Darkmoon Bow</option>
+		</optgroup>
+		<optgroup label="Greatbows">
+			<option value="dragonslayer_bow">Dragonslayer Greatbow</option>
+			<option value="gough_bow">Gough's Greatbow</option>
+		</optgroup>
+		<optgroup label="Crossbows">
+			<option value="light_cbow">Light Crossbow</option>
+			<option value="heavy_cbow">Heavy Crossbow</option>
+			<option value="sniper_cbow">Sniper Crossbow</option>
+			<option value="avelyn">Avelyn</option>
+		</optgroup>
+		<optgroup label="Catalysts">
+			<option value="sorc_cat">Sorcerer's Catalyst</option>
+			<option value="izalith_cat">Izalith Catalyst</option>
+			<option value="logan_cat">Logan's Catalyst</option>
+			<option value="beat_cat">Beatrice's Catalyst</option>
+			<option value="oolacile_cat">Oolacile Ivory Catalyst</option>
+			<option value="demon_cat">Demon's Catalyst</option>
+			<option value="crystal_cat">Tin Crystallization Catalyst</option>
+			<option value="dark_cat">Tin Darkmoon Catalyst</option>
+			<option value="manus_cat">Manus Catalyst</option>
+		</optgroup>
+		<optgroup label="Flames">
+			<option value="pyro_flame">Pyromancy Flame</option>
+			<option value="pyro_flame_u">Pyromancy Flame (Upgraded)</option>
+		</optgroup>
+		<optgroup label="Talismans">
+			<option value="tali">Talisman</option>
+			<option value="canvas_tali">Canvas Talisman</option>
+			<option value="thoro_tali">Thorolund Talisman</option>
+			<option value="ivory_tali">Ivory Talisman</option>
+			<option value="sun_tali">Sunlight Talisman</option>
+			<option value="velka_tali">Velka's Talisman</option>
+			<option value="dark_tali">Darkmoon Talisman</option>
+		</optgroup>
+	</select>
+</form>
+<form id="rh1_f" action="/action_page.php">
+	<label>RH1</label>
+	<select class="selectBox" id="rh1" name="rh1" style="width: 150px;">
+	<optgroup label="Daggers">
+			<option value="dagger">Dagger</option>
+			<option value="ghost_blade">Ghost Blade</option>
+			<option value="bandit_knife">Bandit's Knife</option>
+			<option value="parry_dagger">Parrying Dagger</option>
+			<option value="priscilla_dagger">Priscilla's Dagger</option>
+			<option value="dsilver_tracer">Dark Silver Tracer</option>
+		</optgroup>
+		<optgroup label="Straight Swords">
+			<option value="sword_hilt">Straight Sword Hilt</option>
+			<option value="broken_sword">Broken Straight Sword</option>
+			<option value="broadsword">Broadsword</option>
+			<option value="shortsword">Shortsword</option>
+			<option value="longsword">Longsword</option>
+			<option value="barbed_sword">Barbed Straight Sword</option>
+			<option value="sunlight_sword">Sunlight Straight Sword</option>
+			<option value="balder_sword">Balder Straight Sword</option>
+			<option value="astora_sword">Astora's Straight Sword</option>
+			<option value="silver_knight_sword">Silver Knight Straight Sword</option>
+			<option value="drake_sword">Drake Sword</option>
+			<option value="darksword">Darksword</option>
+			<option value="crystal_sword">Crystal Straight Sword</option>
+		</optgroup>
+		<optgroup label="Greatswords">
+			<option value="bastard_sword">Bastard Sword</option>
+			<option value="blk_knight_sword">Black Knight Sword</option>
+			<option value="claymore">Claymore</option>
+			<option value="flamberge">Flamberge</option>
+			<option value="crystal_gsword">Crystal Greatsword"</option>
+			<option value="manserpent_gsword">Man-Serpent Greatsword</option>
+			<option value="gr8_lord_gsword">Great Lord Greatsword</option>
+			<option value="moonlight_gsword">Moonlight Greatsword</option>
+			<option value="artorias_gsword">Greatsword of Artorias</option>
+			<option value="artorias_curse_gsword">Greatsword of Artorias (Cursed)</option>
+			<option value="stone_gsword">Stone Greatsword</option>
+			<option value="abyss_gsword">Abyss Greatsword</option>
+			<option value="obsidian_gsword">Obsidian Greatsword</option>
+		</optgroup>
+		<optgroup label="Ultra Greatswords">
+			<option value="dragon_gsword">Dragon Greatsword</option>
+			<option value="ug_sword">Greatsword</option>
+			<option value="blk_knight_gsword">Black Knight Greatsword</option>
+			<option value="zweihander">Zweihander</option>
+			<option value="demon_gsword">Demon Great Machete</option>
+		</optgroup>
+		<optgroup label="Curved Swords">
+			<option value="scimitar">Scimitar</option>
+			<option value="shotel">Shotel</option>
+			<option value="falcion">Falchion</option>
+			<option value="quelaag_sword">Quelaag's Furysword</option>
+			<option value="paint_guard_sword">Painting Guardian Sword</option>
+			<option value="jagged_ghost_blade">Jagged Ghost Blade</option>
+			<option value="gold_tracer">Gold Tracer</option>
+		</optgroup>
+		<optgroup label="Katanas">
+			<option value="uchigatana">Uchigatana</option>
+			<option value="washing_pole">Washing Pole</option>
+			<option value="iaito">Iaito</option>
+			<option value="chaos_blade">Chaos Blade</option>
+		</optgroup>
+		<optgroup label="Curved Greatswords">
+			<option value="server">Server</option>
+			<option value="murakumo">Murakumo</option>
+			<option value="gravelord_sword">Gravelord Sword</option>
+		</optgroup>
+		<optgroup label="Piercing Swords">
+			<option value="rapier">Rapier</option>
+			<option value="estoc">Estoc</option>
+			<option value="mail_breaker">Mail Breaker</option>
+			<option value="ricard_rapier">Ricard's Rapier</option>
+			<option value="velka_rapier">Velka's Rapier</option>
+		</optgroup>
+		<optgroup label="Axes">
+			<option value="hand_axe">Hand Axe</option>
+			<option value="gargoyle_axe">Gargoyle Tail Axe</option>
+			<option value="battle_axe">Battle Axe</option>
+			<option value="butcher_knife">Butcher Knife</option>
+			<option value="crescent_axe">Crescent Axe</option>
+			<option value="golem_axe">Golem Axe</option>
+		</optgroup>
+		<optgroup label="Great Axes">
+			<option value="demon_axe">Demon's Greataxe</option>
+			<option value="greataxe">Greataxe</option>
+			<option value="dragon_king_axe">Dragon King Greataxe</option>
+			<option value="blk_knight_axe">Black Knight Greataxe</option>
+			<option value="stone_axe">Stone Greataxe</option>
+		</optgroup>
+		<optgroup label="Hammers">
+			<option value="club">Club</option>
+			<option value="reinf_club">Reinforced Club</option>
+			<option value="mace">Mace</option>
+			<option value="morning_star">Morning Star</option>
+			<option value="warpick">Warpick</option>
+			<option value="pickaxe">Pickaxe</option>
+			<option value="blksmith_hammer">Blacksmith Hammer</option>
+			<option value="blksmith_ghammer">Blacksmith Giant Hammer</option>
+			<option value="vamos_hammer">Hammer of Vamos</option>
+		</optgroup>
+		<optgroup label="Great Hammers">
+			<option value="demon_hammer">Demon's Greathammer</option>
+			<option value="great_club">Great Club</option>
+			<option value="dragon_tooth">Dragon Tooth</option>
+			<option value="smough_hammer">Smough's Hammer</option>
+			<option value="grant">Grant</option>
+			<option value="large_club">Large Club</option>
+		</optgroup>
+		<optgroup label="Fists & Claws">
+			<option value="caestus">Caestus</option>
+			<option value="claws">Claws</option>
+			<option value="dragon_bone_fist">Dragon Bone Fist</option>
+			<option value="dark_hand">Dark Hand</option>
+		</optgroup>
+		<optgroup label="Spears">
+			<option value="spear">Spear</option>
+			<option value="wing_spear">Winged Spear</option>
+			<option value="demon_spear">Demon's Spear</option>
+			<option value="pike">Pike</option>
+			<option value="dragonslay_spear">Dragonslayer Spear</option>
+			<option value="partizan">Partizan</option>
+			<option value="channeler_trident">Channeler's Trident</option>
+			<option value="silver_knight_spear">Silver Knight Spear</option>
+			<option value="moon_butter_horn">Moonlight Butterfly Horn</option>
+			<option value="fourprong_plow">Four-pronged Plow</option>
+		</optgroup>
+		<optgroup label="Halberds">
+			<option value="halberd">Halberd</option>
+			<option value="gargoyle_halberd">Gargoyle's Halberd</option>
+			<option value="catch_pole">Titanite Catch Pole</option>
+			<option value="blk_knight_halberd">Black Knight Halberd</option>
+			<option value="great_scythe">Great Scythe</option>
+			<option value="lifehunt_scythe">Lifehunt Scythe</option>
+			<option value="scythe">Scythe</option>
+			<option value="lucerne">Lucerne</option>
+			<option value="giant_halberd">Giant's Halberd</option>
+		</optgroup>
+		<optgroup label="Whips">
+			<option value="whip">Whip</option>
+			<option value="notch_whip">Notched Whip</option>
+			<option value="guard_tail">Guardian Tail</option>
+		</optgroup>
+		<optgroup label="Bows">
+			<option value="shortbow">Short Bow</option>
+			<option value="longbow">Long Bow</option>
+			<option value="comp_bow">Composite Bow</option>
+			<option value="blk_pharis_bow">Black Bow of Pharis</option>
+			<option value="darkmoon_bow">Darkmoon Bow</option>
+		</optgroup>
+		<optgroup label="Greatbows">
+			<option value="dragonslayer_bow">Dragonslayer Greatbow</option>
+			<option value="gough_bow">Gough's Greatbow</option>
+		</optgroup>
+		<optgroup label="Crossbows">
+			<option value="light_cbow">Light Crossbow</option>
+			<option value="heavy_cbow">Heavy Crossbow</option>
+			<option value="sniper_cbow">Sniper Crossbow</option>
+			<option value="avelyn">Avelyn</option>
+		</optgroup>
+		<optgroup label="Catalysts">
+			<option value="sorc_cat">Sorcerer's Catalyst</option>
+			<option value="izalith_cat">Izalith Catalyst</option>
+			<option value="logan_cat">Logan's Catalyst</option>
+			<option value="beat_cat">Beatrice's Catalyst</option>
+			<option value="oolacile_cat">Oolacile Ivory Catalyst</option>
+			<option value="demon_cat">Demon's Catalyst</option>
+			<option value="crystal_cat">Tin Crystallization Catalyst</option>
+			<option value="dark_cat">Tin Darkmoon Catalyst</option>
+			<option value="manus_cat">Manus Catalyst</option>
+		</optgroup>
+		<optgroup label="Flames">
+			<option value="pyro_flame">Pyromancy Flame</option>
+			<option value="pyro_flame_u">Pyromancy Flame (Upgraded)</option>
+		</optgroup>
+		<optgroup label="Talismans">
+			<option value="tali">Talisman</option>
+			<option value="canvas_tali">Canvas Talisman</option>
+			<option value="thoro_tali">Thorolund Talisman</option>
+			<option value="ivory_tali">Ivory Talisman</option>
+			<option value="sun_tali">Sunlight Talisman</option>
+			<option value="velka_tali">Velka's Talisman</option>
+			<option value="dark_tali">Darkmoon Talisman</option>
+		</optgroup>
+	</select>
+</form>
+<form id="rh2_f" action="/action_page.php">
+	<label>RH2</label>
+	<select class="selectBox" id="rh2" name="rh2" style="width: 150px;">
+	<optgroup label="Daggers">
+			<option value="dagger">Dagger</option>
+			<option value="ghost_blade">Ghost Blade</option>
+			<option value="bandit_knife">Bandit's Knife</option>
+			<option value="parry_dagger">Parrying Dagger</option>
+			<option value="priscilla_dagger">Priscilla's Dagger</option>
+			<option value="dsilver_tracer">Dark Silver Tracer</option>
+		</optgroup>
+		<optgroup label="Straight Swords">
+			<option value="sword_hilt">Straight Sword Hilt</option>
+			<option value="broken_sword">Broken Straight Sword</option>
+			<option value="broadsword">Broadsword</option>
+			<option value="shortsword">Shortsword</option>
+			<option value="longsword">Longsword</option>
+			<option value="barbed_sword">Barbed Straight Sword</option>
+			<option value="sunlight_sword">Sunlight Straight Sword</option>
+			<option value="balder_sword">Balder Straight Sword</option>
+			<option value="astora_sword">Astora's Straight Sword</option>
+			<option value="silver_knight_sword">Silver Knight Straight Sword</option>
+			<option value="drake_sword">Drake Sword</option>
+			<option value="darksword">Darksword</option>
+			<option value="crystal_sword">Crystal Straight Sword</option>
+		</optgroup>
+		<optgroup label="Greatswords">
+			<option value="bastard_sword">Bastard Sword</option>
+			<option value="blk_knight_sword">Black Knight Sword</option>
+			<option value="claymore">Claymore</option>
+			<option value="flamberge">Flamberge</option>
+			<option value="crystal_gsword">Crystal Greatsword"</option>
+			<option value="manserpent_gsword">Man-Serpent Greatsword</option>
+			<option value="gr8_lord_gsword">Great Lord Greatsword</option>
+			<option value="moonlight_gsword">Moonlight Greatsword</option>
+			<option value="artorias_gsword">Greatsword of Artorias</option>
+			<option value="artorias_curse_gsword">Greatsword of Artorias (Cursed)</option>
+			<option value="stone_gsword">Stone Greatsword</option>
+			<option value="abyss_gsword">Abyss Greatsword</option>
+			<option value="obsidian_gsword">Obsidian Greatsword</option>
+		</optgroup>
+		<optgroup label="Ultra Greatswords">
+			<option value="dragon_gsword">Dragon Greatsword</option>
+			<option value="ug_sword">Greatsword</option>
+			<option value="blk_knight_gsword">Black Knight Greatsword</option>
+			<option value="zweihander">Zweihander</option>
+			<option value="demon_gsword">Demon Great Machete</option>
+		</optgroup>
+		<optgroup label="Curved Swords">
+			<option value="scimitar">Scimitar</option>
+			<option value="shotel">Shotel</option>
+			<option value="falcion">Falchion</option>
+			<option value="quelaag_sword">Quelaag's Furysword</option>
+			<option value="paint_guard_sword">Painting Guardian Sword</option>
+			<option value="jagged_ghost_blade">Jagged Ghost Blade</option>
+			<option value="gold_tracer">Gold Tracer</option>
+		</optgroup>
+		<optgroup label="Katanas">
+			<option value="uchigatana">Uchigatana</option>
+			<option value="washing_pole">Washing Pole</option>
+			<option value="iaito">Iaito</option>
+			<option value="chaos_blade">Chaos Blade</option>
+		</optgroup>
+		<optgroup label="Curved Greatswords">
+			<option value="server">Server</option>
+			<option value="murakumo">Murakumo</option>
+			<option value="gravelord_sword">Gravelord Sword</option>
+		</optgroup>
+		<optgroup label="Piercing Swords">
+			<option value="rapier">Rapier</option>
+			<option value="estoc">Estoc</option>
+			<option value="mail_breaker">Mail Breaker</option>
+			<option value="ricard_rapier">Ricard's Rapier</option>
+			<option value="velka_rapier">Velka's Rapier</option>
+		</optgroup>
+		<optgroup label="Axes">
+			<option value="hand_axe">Hand Axe</option>
+			<option value="gargoyle_axe">Gargoyle Tail Axe</option>
+			<option value="battle_axe">Battle Axe</option>
+			<option value="butcher_knife">Butcher Knife</option>
+			<option value="crescent_axe">Crescent Axe</option>
+			<option value="golem_axe">Golem Axe</option>
+		</optgroup>
+		<optgroup label="Great Axes">
+			<option value="demon_axe">Demon's Greataxe</option>
+			<option value="greataxe">Greataxe</option>
+			<option value="dragon_king_axe">Dragon King Greataxe</option>
+			<option value="blk_knight_axe">Black Knight Greataxe</option>
+			<option value="stone_axe">Stone Greataxe</option>
+		</optgroup>
+		<optgroup label="Hammers">
+			<option value="club">Club</option>
+			<option value="reinf_club">Reinforced Club</option>
+			<option value="mace">Mace</option>
+			<option value="morning_star">Morning Star</option>
+			<option value="warpick">Warpick</option>
+			<option value="pickaxe">Pickaxe</option>
+			<option value="blksmith_hammer">Blacksmith Hammer</option>
+			<option value="blksmith_ghammer">Blacksmith Giant Hammer</option>
+			<option value="vamos_hammer">Hammer of Vamos</option>
+		</optgroup>
+		<optgroup label="Great Hammers">
+			<option value="demon_hammer">Demon's Greathammer</option>
+			<option value="great_club">Great Club</option>
+			<option value="dragon_tooth">Dragon Tooth</option>
+			<option value="smough_hammer">Smough's Hammer</option>
+			<option value="grant">Grant</option>
+			<option value="large_club">Large Club</option>
+		</optgroup>
+		<optgroup label="Fists & Claws">
+			<option value="caestus">Caestus</option>
+			<option value="claws">Claws</option>
+			<option value="dragon_bone_fist">Dragon Bone Fist</option>
+			<option value="dark_hand">Dark Hand</option>
+		</optgroup>
+		<optgroup label="Spears">
+			<option value="spear">Spear</option>
+			<option value="wing_spear">Winged Spear</option>
+			<option value="demon_spear">Demon's Spear</option>
+			<option value="pike">Pike</option>
+			<option value="dragonslay_spear">Dragonslayer Spear</option>
+			<option value="partizan">Partizan</option>
+			<option value="channeler_trident">Channeler's Trident</option>
+			<option value="silver_knight_spear">Silver Knight Spear</option>
+			<option value="moon_butter_horn">Moonlight Butterfly Horn</option>
+			<option value="fourprong_plow">Four-pronged Plow</option>
+		</optgroup>
+		<optgroup label="Halberds">
+			<option value="halberd">Halberd</option>
+			<option value="gargoyle_halberd">Gargoyle's Halberd</option>
+			<option value="catch_pole">Titanite Catch Pole</option>
+			<option value="blk_knight_halberd">Black Knight Halberd</option>
+			<option value="great_scythe">Great Scythe</option>
+			<option value="lifehunt_scythe">Lifehunt Scythe</option>
+			<option value="scythe">Scythe</option>
+			<option value="lucerne">Lucerne</option>
+			<option value="giant_halberd">Giant's Halberd</option>
+		</optgroup>
+		<optgroup label="Whips">
+			<option value="whip">Whip</option>
+			<option value="notch_whip">Notched Whip</option>
+			<option value="guard_tail">Guardian Tail</option>
+		</optgroup>
+		<optgroup label="Bows">
+			<option value="shortbow">Short Bow</option>
+			<option value="longbow">Long Bow</option>
+			<option value="comp_bow">Composite Bow</option>
+			<option value="blk_pharis_bow">Black Bow of Pharis</option>
+			<option value="darkmoon_bow">Darkmoon Bow</option>
+		</optgroup>
+		<optgroup label="Greatbows">
+			<option value="dragonslayer_bow">Dragonslayer Greatbow</option>
+			<option value="gough_bow">Gough's Greatbow</option>
+		</optgroup>
+		<optgroup label="Crossbows">
+			<option value="light_cbow">Light Crossbow</option>
+			<option value="heavy_cbow">Heavy Crossbow</option>
+			<option value="sniper_cbow">Sniper Crossbow</option>
+			<option value="avelyn">Avelyn</option>
+		</optgroup>
+		<optgroup label="Catalysts">
+			<option value="sorc_cat">Sorcerer's Catalyst</option>
+			<option value="izalith_cat">Izalith Catalyst</option>
+			<option value="logan_cat">Logan's Catalyst</option>
+			<option value="beat_cat">Beatrice's Catalyst</option>
+			<option value="oolacile_cat">Oolacile Ivory Catalyst</option>
+			<option value="demon_cat">Demon's Catalyst</option>
+			<option value="crystal_cat">Tin Crystallization Catalyst</option>
+			<option value="dark_cat">Tin Darkmoon Catalyst</option>
+			<option value="manus_cat">Manus Catalyst</option>
+		</optgroup>
+		<optgroup label="Flames">
+			<option value="pyro_flame">Pyromancy Flame</option>
+			<option value="pyro_flame_u">Pyromancy Flame (Upgraded)</option>
+		</optgroup>
+		<optgroup label="Talismans">
+			<option value="tali">Talisman</option>
+			<option value="canvas_tali">Canvas Talisman</option>
+			<option value="thoro_tali">Thorolund Talisman</option>
+			<option value="ivory_tali">Ivory Talisman</option>
+			<option value="sun_tali">Sunlight Talisman</option>
+			<option value="velka_tali">Velka's Talisman</option>
+			<option value="dark_tali">Darkmoon Talisman</option>
+		</optgroup>
+	</select>
+</form>
+<br>
+<hr/>
+<br>
+<center>
+<h1><b>WELL, WHAT IS IT?</h1>
+<img src="giantdad.jpg" alt="Image Unavailable"></img>
+</center>
+<br>
+<hr/>
 </body>
 </html>
